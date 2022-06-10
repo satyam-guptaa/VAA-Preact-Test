@@ -1,6 +1,6 @@
 import { h, JSX, Fragment } from 'preact'
-import { BookingResponse } from '../types/booking'
-import Hotel from "../components/hotel.component"
+import { BookingResponse } from '../../types/booking'
+import Hotel from "./hotel.component"
 import * as style from './search.result.module.less'
 import Filter from './filter.component'
 import { useEffect, useState } from 'preact/hooks'

@@ -3,7 +3,7 @@ import { useRouter } from "preact-router";
 import { useEffect, useState } from 'preact/hooks';
 import SearchComponent from '../components/search.component';
 import { doRequest } from '../services/http.service';
-import Results from '../components/search.result.component';
+import Results from '../components/my-components/search.result.component';
 import { BookingRequest, BookingResponse, Holiday } from '../types/booking';
 import { DateTime } from 'luxon';
 import ClipLoader from "react-spinners/ClipLoader";

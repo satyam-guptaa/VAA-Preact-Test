@@ -1,5 +1,5 @@
 import { h, JSX } from "preact";
-import { Hotel, Image } from "../types/booking";
+import { Hotel, Image } from "../../types/booking";
 import * as style from "./hotel.component.module.less";
 import StarRating from "react-svg-star-rating";
 
