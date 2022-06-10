@@ -57,7 +57,7 @@ export default function Results ({holidays}: ResultProps) {
             // If user selects multiple prices
            let filterHoliday = []
            selectedPrice.forEach(range => {
-               filterHoliday.push(filteredResult.filter(x => x["pricePerPerson"] >= range[0] && x["pricePerPerson"] <= range[1]))
+               filterHoliday.push(filteredResult.filter(holiday => holiday["pricePerPerson"] >= range[0] && holiday["pricePerPerson"] <= range[1]))
             })
             // Concating the filtered arrays if user selects multiple prices
             filteredResult = [].concat(...filterHoliday)
