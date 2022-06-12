@@ -55,7 +55,7 @@ export default function Results ({holidays}: ResultProps) {
         if(selectedPrice.length > 0) {
             // Filtering out the holidays for all the selected price and pushing the arrays in an empty array
             // If user selects multiple prices
-           let filterHoliday = []
+           let filterHoliday : any[] = []
            selectedPrice.forEach(range => {
                filterHoliday.push(filteredResult.filter(holiday => holiday["pricePerPerson"] >= range[0] && holiday["pricePerPerson"] <= range[1]))
             })
@@ -64,7 +64,7 @@ export default function Results ({holidays}: ResultProps) {
         }
         // Rating Filter
         if(selectedRating){
-            filteredResult = filteredResult.filter(holiday => holiday["hotel"]["content"]["vRating"] >= selectedRating)
+            filteredResult = filteredResult.filter(holiday => parseInt(holiday["hotel"]["content"]["vRating"]) >= selectedRating)
         }
         // Facility Filter
         if(selectedFacilities) {

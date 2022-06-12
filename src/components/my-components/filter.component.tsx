@@ -30,13 +30,13 @@ export default function Filter({handlePriceFilter,handleRatingFilter,handleFacil
         <div className={style["filter-input"]}>
             <input
             type="checkbox"
-            id={arr[0]}
+            id={arr[0].toString()}
             onClick={handlePriceFilter}
             value={arr}
             />
             <label
             className="form-check-label"
-            htmlFor={arr[0]}
+            htmlFor={arr[0].toString()}
             >{`From ${arr[0]} to ${arr[1]}`}</label>
         </div>
         );

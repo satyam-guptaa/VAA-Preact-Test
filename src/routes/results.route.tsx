@@ -51,6 +51,7 @@ export default function ResultsRoute(): JSX.Element {
     return (
         <section>
             <SearchComponent />
+            <br />
             {!spin && <Results holidays={holidays}/>}
             {spin && <ClipLoader color="red" loading={spin} css={override} size={150} />} 
         </section>
