@@ -8,6 +8,8 @@ import { BookingRequest, BookingResponse, Holiday } from '../types/booking';
 import { DateTime } from 'luxon';
 import ClipLoader from "react-spinners/ClipLoader";
 import { css } from "@emotion/react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ResultsRoute(): JSX.Element {
     const [searchParams] = useRouter();
@@ -44,13 +46,22 @@ export default function ResultsRoute(): JSX.Element {
                 setSpin(false)
             }).catch((error)=>{
                 setSpin(false)
-                console.log(error)  
+                toast.error('An unexpected error occured', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
             })
     }, [searchParams])
 
     return (
         <section>
             <SearchComponent />
+            <ToastContainer />
             <br />
             {!spin && <Results holidays={holidays}/>}
             {spin && <ClipLoader color="red" loading={spin} css={override} size={150} />} 

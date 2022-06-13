@@ -74,7 +74,9 @@
     "preact-async-route": "^2.2.1",
     "preact-router": "^4.0.1",
     "react-spinners": "^0.12.0",
-    "react-svg-star-rating": "^2.1.2"
+    "react-svg-star-rating": "^2.1.2",
+    "react-toastify": "^9.0.4",
+    "toastify": "^2.0.1"
   },
   "alias": {
     "react": "preact/compat",
