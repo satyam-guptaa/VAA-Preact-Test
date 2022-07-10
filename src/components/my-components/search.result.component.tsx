@@ -78,7 +78,7 @@ export default function Results ({holidays}: ResultProps) {
             {!render && <div className={`${style["filters"]}`}>
                 <Filter handlePriceFilter={handlePriceFilter} handleRatingFilter={handleRatingFilter} selectedRating={selectedRating} handleFacilityFilter={handleFacilityFilter} handleRemoveFilter={handleRemoveFilter}/>
             </div>}
-            {filteredHolidays.length > 0 && 
+            {filteredHolidays.length > 0 && !render && 
             <div className={`${style["hotels-grid"]}`}>
                 {filteredHolidays.map(holiday => {
                     return <Hotel hotel={holiday["hotel"]} pricePP={holiday["pricePerPerson"]}/>
