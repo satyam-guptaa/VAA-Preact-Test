@@ -1,6 +1,7 @@
 import { createRef, h, JSX } from "preact";
 import * as style from "./filter.component.module.less";
 import StarRating from "react-svg-star-rating";
+import facilities from '../../consts/facilities'
 
 interface FilterProps {
   handlePriceFilter: (e: MouseEvent) => void;
@@ -12,18 +13,6 @@ interface FilterProps {
 
 export default function Filter({handlePriceFilter,handleRatingFilter,handleFacilityFilter,selectedRating, handleRemoveFilter}: FilterProps) {
 
-    const facilities = [
-        "Restaurant",
-        "Bar",
-        "Spa",
-        "Room Service",
-        "Valet parking",
-        "Safety Deposit Box",
-        "Fitness Centre/Gym",
-        "Laundry Service",
-        "Internet Access",
-        "Swimming Pool",
-    ];
     
     const priceFilter = (arr: number[]): JSX.Element => {
         return (
