@@ -1,32 +1,42 @@
+@import (reference) "../../less/styled-components.include.less";
+
+h4, h2 {
+    font-weight: @font-weight-bold;
+}
+
 .filter-input label{
     display: inline;
     font-size: 1.2rem;
     margin-left: 5px;
+    cursor: pointer;
 }
+
 .filter-input label:hover {
-    font-weight: bold;
+    font-weight: @font-weight-bold;
+    color: @purple;
 }
 .rating-anchor {
     text-decoration: none;
-    color: black;
+    color: @purple;
     display: inline-block;
     padding: 2px;
     font-size: 1.1rem;
     margin: 0 5px;
-    border: 1px solid grey;
+    border: 1px solid @toothbrush;
     border-radius: 20%;
     text-align: center;
+    transition: background-color @transition-speed @transition-easing;
 }
 a:hover {
     text-decoration: none;
-    color: white;
-    background-color: black;
-    color: white;
+    color: @white;
+    background-color: @purple;
+    color: @white;
 }
 .active {
     text-decoration: none;
-    background-color: black;
-    color: white;
+    background-color: @purple;
+    color: @white;
     display: inline-block;
     padding: 2px;
     font-size: 1.1rem;
