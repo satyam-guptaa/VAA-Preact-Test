@@ -44,28 +44,27 @@ export default function Filter({handlePriceFilter,handleRatingFilter,handleFacil
     };
 
     return (
-        <div>
-        <h2>Filters</h2>
-        <hr />
-        <div className="price-filter">
-            <h4>Price</h4>
-            {priceFilter([0, 500])}
-            {priceFilter([500, 1500])}
-            {priceFilter([1500, 3000])}
-            {priceFilter([3000, 5000])}
-        </div>
-        <hr />
-        <div className="rating-filter">
-            <h4>Ratings</h4>
-            {ratingFilter(1)}
-            {ratingFilter(2)}
-            {ratingFilter(3)}
-            {ratingFilter(4)}
-        </div>
-        <div className="facility-filter">
+        <div className={`${style["filter-elements"]}`}>
+            <h2>Filters</h2>
             <hr />
-            <div className="rating-filter">
+            <h4>Price</h4>
+            <div className={`${style["price-filter"]}`}>
+                {priceFilter([0, 500])}
+                {priceFilter([500, 1500])}
+                {priceFilter([1500, 3000])}
+                {priceFilter([3000, 5000])}
+            </div>
+            <hr />
+            <h4>Ratings</h4>
+            <div className={`${style["rating-filter"]}`}>
+                {ratingFilter(1)}
+                {ratingFilter(2)}
+                {ratingFilter(3)}
+                {ratingFilter(4)}
+            </div>
+            <hr />
             <h4>Facilities</h4>
+            <div className={`${style["facility-filter"]}`}>
             {facilities.map((facility) => {
                 return (
                 <div className={style["filter-input"]} key={facility}>
@@ -77,11 +76,10 @@ export default function Filter({handlePriceFilter,handleRatingFilter,handleFacil
                 );
             })}
             </div>
-        </div>
-        <hr />
-        <div>
-            <button type="button" className="btn btn-danger" onClick={handleRemoveFilter}>Remove Filter</button>
-        </div>
+            <hr />
+            <div>
+                <button type="button" className="btn btn-danger" onClick={handleRemoveFilter}>Remove Filter</button>
+            </div>
         </div>
     );
 }
