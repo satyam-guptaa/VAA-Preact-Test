@@ -33,7 +33,7 @@ export default function Hotel({ hotel, pricePP }: HotelProps) {
           <span>&#8364;</span> {pricePP} <sub>PP</sub>
         </p> 
         <a href="#" className="btn btn-secondary">
-          Go somewhere
+          View Details
         </a>
         
       </div>
