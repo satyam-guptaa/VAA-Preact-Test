@@ -2,11 +2,7 @@ import { h, JSX } from "preact";
 import { Hotel, Image } from "../../types/booking";
 import * as style from "./hotel.component.module.less";
 import StarRating from "react-svg-star-rating";
-
-type HotelProps = {
-  hotel: Hotel;
-  pricePP: number;
-};
+import {HotelProps} from '../../types/componentProps'
 
 export default function Hotel({ hotel, pricePP }: HotelProps) {
   const hotelImage: Image = hotel["content"]["images"][0]["RESULTS_CAROUSEL"];

@@ -2,18 +2,10 @@ import { createRef, h, JSX } from "preact";
 import * as style from "./filter.component.module.less";
 import StarRating from "react-svg-star-rating";
 import facilities from '../../consts/facilities'
-
-interface FilterProps {
-  handlePriceFilter: (e: MouseEvent) => void;
-  handleRatingFilter: (rating: number) => void;
-  handleFacilityFilter: (e: MouseEvent) => void;
-  selectedRating: number;
-  handleRemoveFilter: (e:MouseEvent) => void;
-}
+import {FilterProps} from '../../types/componentProps'
 
 export default function Filter({handlePriceFilter,handleRatingFilter,handleFacilityFilter,selectedRating, handleRemoveFilter}: FilterProps) {
 
-    
     const priceFilter = (arr: number[]): JSX.Element => {
         return (
         <div className={style["filter-input"]}>

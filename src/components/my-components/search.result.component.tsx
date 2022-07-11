@@ -4,11 +4,7 @@ import Hotel from "./hotel.component"
 import * as style from './search.result.module.less'
 import Filter from './filter.component'
 import { useEffect, useState } from 'preact/hooks'
-
-
-type ResultProps = {
-    holidays: BookingResponse[],
-}
+import {ResultProps} from '../../types/componentProps'
 
 export default function Results ({holidays}: ResultProps) {
     const [filteredHolidays, setFilteredHolidays] = useState<BookingResponse[]>(holidays)
