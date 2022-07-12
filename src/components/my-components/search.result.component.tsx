@@ -40,8 +40,9 @@ export default function Results ({holidays}: ResultProps) {
         setRender(true)
         setTimeout(()=>{setRender(false)}, 50)
     }
-
-    useEffect(()=>setFilteredHolidays(holidays), [holidays])
+    
+    // unneccesary
+    // useEffect(()=>setFilteredHolidays(holidays), [holidays])
 
     useEffect(()=>applyFilter(), [selectedPrice, selectedRating, selectedFacilities])
 
