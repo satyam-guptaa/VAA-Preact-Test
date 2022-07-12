@@ -28,10 +28,9 @@ export default function Hotel({ hotel, pricePP }: HotelProps) {
         <p className={`card-text ${style["cardText"]}`}>
           <span>&#8364;</span> {pricePP} <sub>PP</sub>
         </p> 
-        <a href="#" className="btn btn-secondary">
+        <button className="btn btn-secondary" disabled>
           View Details
-        </a>
-        
+        </button>
       </div>
     </div>
   );

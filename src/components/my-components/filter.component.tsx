@@ -25,8 +25,7 @@ export default function Filter({handlePriceFilter,handleRatingFilter,handleFacil
 
     const ratingFilter = (stars: number): JSX.Element => {
         return (
-        <a
-            href="#"
+        <button
             className={selectedRating === stars? `${style["active"]}`: `${style["rating-anchor"]}`}
             onClick={() => handleRatingFilter(stars)}
         >
@@ -39,7 +38,7 @@ export default function Filter({handlePriceFilter,handleRatingFilter,handleFacil
             isReadOnly={true}
             />
             +
-        </a>
+        </button>
         );
     };
 
