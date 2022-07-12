@@ -8,7 +8,7 @@ export default function Hotel({ hotel, pricePP }: HotelProps) {
   const hotelImage: Image = hotel["content"]["images"][0]["RESULTS_CAROUSEL"];
   const hotelName: string = hotel["content"]["name"];
   const hotelRating: string | number = hotel.content.vRating;
-  // width: 18rem;
+  
   return (
     <div className="card" style="box-shadow: 0 0 10px grey">
       <img src={hotelImage["url"]} className="card-img-top" alt="..." />
